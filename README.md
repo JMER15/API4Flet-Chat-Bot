@@ -202,5 +202,4 @@ Este proyecto está bajo la **licencia MIT**.
 
 - [José Miguel Escribano Ruiz](https://github.com/JMER15)
 
-[subir](#contenido)#   A P I 4 F l e t - C h a t - B o t  
- 
+[subir](#contenido)
