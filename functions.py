@@ -36,7 +36,7 @@ def get_weather(city):
             translate_description = translate_text(description)
             return f"El clima en {city} es {translate_description} con una temperatura de {temperature}°C."
         else:
-            return f"No se pudo obtener el clima para {city}. Código de estado: {response.status_code}"
+            return f"No se pudo obtener el clima para {city}. Verifica que el nombre de la ciudad sea correcto."
     except requests.exceptions.RequestException as e:
         return f"Error de red al obtener información del tiempo: {str(e)}"
     except Exception as e:  
@@ -69,7 +69,7 @@ def get_pokemon(pokemon_name):
             return f"El pokemón {name} es de tipo {', '.join(types)}. Su altura es: {height / 10} m y su peso: {weight / 10} kg"
             # hay que dividirlo por 10 por que no representa la altura ni el peso directamente.
         else:
-            return f"No se pudo obtener información sobre {pokemon_name}. Código de estado: {response.status_code}"
+            return f"No se pudo obtener información sobre {pokemon_name}. Revisa que el nombre del pokemón sea correcto."
     except requests.exceptions.RequestException as e:
         return f"Error de red al obtener información del pokemon: {str(e)}"  
     except Exception as e:
@@ -101,7 +101,7 @@ def get_country_info(country):
                      f"Idiomas: {languages}\n" \
                      f"Monedas: {currencies}"
         else:
-            return f"No se pudo obtener información de {country}. Código de estado: {response.status_code}"
+            return f"No se pudo obtener información de {country}. Verifica que el nombre del país sea correcto."
     except requests.exceptions.RequestException as e:
         return f"Error de red al obtener información del país: {str(e)}"  
     except Exception as e:
