@@ -7,6 +7,7 @@ from flet import Page, TextField, ElevatedButton, Column, Text, Colors, Dropdown
 from functions import get_response_ai, get_weather, get_pokemon, get_country_info
 
 def main(page: Page):
+    
     page.title = "Chatbot con Flet"
     page.window.width = 800
     page.window.height = 600
@@ -56,12 +57,23 @@ def main(page: Page):
         if not user_message:
             return # si no hay mensaje, no hacemos nada y salimos de la función
         
+        # Creamos el texto que se va a mostrar en pantalla
+        match mode_dropdown.value:
+            case "paises":
+                display_text = f"Consultar un País: {user_message}"
+            case "tiempo":
+                display_text = f"Consultar el tiempo en: {user_message}"
+            case "pokemon":
+                display_text = f"Consultar Pokémon: {user_message}"
+            case _:
+                display_text = user_message
+        
         # Mostrar mensaje del usuario
         chat_area.controls.append(
             flet.Text(
                 spans=[
                     flet.TextSpan("Usuario: ", style=flet.TextStyle(weight=flet.FontWeight.BOLD)),
-                    flet.TextSpan(user_message)
+                    flet.TextSpan(display_text)
                 ]
             )
         )
