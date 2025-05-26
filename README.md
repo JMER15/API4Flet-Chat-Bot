@@ -104,6 +104,9 @@ El proyecto está estructurado de la siguiente manera:
 
 - **.env**: Archivo que contiene las variables de entorno necesarias para la aplicación. En este caso, contiene la **api_key de OpenRouter y OpenWeatherMap**.
 
+    **Importante:**
+    Deberás de poner tus propias claves de las APIs en el archivo `.env` para que la aplicación funcione correctamente.
+
 - **requirements.txt**: Archivo que contiene las dependencias necesarias para ejecutar la aplicación.
 
 ## **Importante:**
