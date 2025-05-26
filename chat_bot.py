@@ -8,8 +8,8 @@ from functions import get_response_ai, get_weather, get_pokemon, get_country_inf
 
 def main(page: Page):
     page.title = "Chatbot con Flet"
-    page.window.width = 600
-    page.window.height = 400
+    page.window.width = 800
+    page.window.height = 600
     page.bgcolor = Colors.WHITE
     # page.theme_mode = "dark"
     input_box = TextField(
@@ -57,7 +57,14 @@ def main(page: Page):
             return # si no hay mensaje, no hacemos nada y salimos de la función
         
         # Mostrar mensaje del usuario
-        chat_area.controls.append(Text(f"Usuario: {user_message}", color=Colors.BLACK))
+        chat_area.controls.append(
+            flet.Text(
+                spans=[
+                    flet.TextSpan("Usuario: ", style=flet.TextStyle(weight=flet.FontWeight.BOLD)),
+                    flet.TextSpan(user_message)
+                ]
+            )
+        )
         user_message = user_message.lower()
 
         # Aquí puedes añadir la lógica para el chatbot ejemplo, puedes usar una API de chatbot o un modelo de lenguaje
@@ -71,7 +78,14 @@ def main(page: Page):
             response = get_response_ai(user_message)
 
         # Mostrar respuesta
-        chat_area.controls.append(Text(f"Chatbot: {response}", color=Colors.BLACK))
+        chat_area.controls.append(
+            flet.Text(
+                spans=[
+                    flet.TextSpan("ChatBot: ", style=flet.TextStyle(weight=flet.FontWeight.BOLD)),
+                    flet.TextSpan(response)
+                ]
+            )
+        )
         
         # Limpiar y actualizar
         input_box.value = ""
