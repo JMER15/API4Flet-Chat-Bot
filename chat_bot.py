@@ -9,6 +9,8 @@ from functions import get_response_ai, get_weather, get_pokemon, get_country_inf
 def main(page: Page):
     
     page.title = "Chatbot con Flet"
+    page.add(Text("Infobot: Asistente Personal", style=flet.TextStyle(size=25, weight=flet.FontWeight.BOLD)))
+    page.horizontal_alignment = flet.CrossAxisAlignment.CENTER # alinear los controles al centro de la página
     page.window.width = 800
     page.window.height = 600
     page.bgcolor = Colors.WHITE
