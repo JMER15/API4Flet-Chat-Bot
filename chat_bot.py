@@ -99,14 +99,23 @@ def main(page: Page):
             )
         )
         
-        # Limpiar y actualizar
+        # Limpiar y actualizar el input
         input_box.value = ""
         page.update()
 
     send_button = ElevatedButton(text="Enviar", 
-                                 on_click=send_message,
-                                 bgcolor=Colors.BLUE_400,
-                                 color=Colors.BLACK)
+                                  on_click=send_message,
+                                  bgcolor=Colors.BLUE_400,
+                                  color=Colors.BLACK)
+    
+    def clear_screen(event):
+        chat_area.controls.clear() # borrar el chat area que es donde está los mensajes usuario-chatbot
+        page.update()
+
+    clear_button = ElevatedButton(text="Borrar",
+                                  on_click=clear_screen,
+                                  bgcolor=Colors.BLUE_400,
+                                  color=Colors.BLACK)
     
     chat_container = Container(
         content=chat_area,
@@ -121,7 +130,8 @@ def main(page: Page):
             controls=[
                 mode_dropdown,
                 input_box,
-                send_button
+                send_button,
+                clear_button
             ],
             spacing=10
         )
