@@ -180,6 +180,8 @@ Si usas visual studio code, puedes ejecutar la aplicación directamente desde el
 ### Ejemplo de uso de la aplicación con la API de OpenRouter:
 ![Ejemplo de uso de la aplicación con la API de OpenRouter](img/img4.png)
 
+![Ejemplo de uso de la aplicación con la API de OpenRouter](img/img4_1.png)
+
 ### Ejemplo de uso de la aplicación con la API de RestCountries:
 ![Ejemplo de uso de la aplicación con la API de RestCountries](img/img5.png)
 

@@ -61,14 +61,10 @@ def main(page: Page):
         
         # Creamos el texto que se va a mostrar en pantalla
         match mode_dropdown.value:
-            case "paises":
-                display_text = f"Consultar un País: {user_message}"
-            case "tiempo":
-                display_text = f"Consultar el tiempo en: {user_message}"
-            case "pokemon":
-                display_text = f"Consultar Pokémon: {user_message}"
-            case _:
-                display_text = user_message
+            case "paises": display_text = f"Consultar un País: {user_message}"
+            case "tiempo": display_text = f"Consultar el tiempo en: {user_message}"
+            case "pokemon": display_text = f"Consultar Pokémon: {user_message}"
+            case _: display_text = user_message
         
         # Mostrar mensaje del usuario
         chat_area.controls.append(
@@ -79,17 +75,16 @@ def main(page: Page):
                 ]
             )
         )
+
+        # Algunas APIs pueden ser sensibles a mayúsculas y minúsculas
         user_message = user_message.lower()
 
         # Aquí puedes añadir la lógica para el chatbot ejemplo, puedes usar una API de chatbot o un modelo de lenguaje
-        if mode_dropdown.value == "tiempo":
-            response = get_weather(user_message)
-        elif mode_dropdown.value == "pokemon":
-            response = get_pokemon(user_message)
-        elif mode_dropdown.value == "paises":
-            response = get_country_info(user_message)
-        else:
-            response = get_response_ai(user_message)
+        match mode_dropdown.value:
+            case "tiempo": response = get_weather(user_message)
+            case "pokemon": response = get_pokemon(user_message)
+            case "paises": response = get_country_info(user_message)
+            case _: response = get_response_ai(user_message)
 
         # Mostrar respuesta
         chat_area.controls.append(
