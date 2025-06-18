@@ -1,7 +1,7 @@
 # Proyecto: "API4Flet Chat Bot"
 
 <div style="text-align:center">
-<img style="width:400px" src="img/flet.png"></img>
+    <img style="width:400px" src="img/flet.png"></img>
 </div>
 
 ## Contenido
@@ -63,15 +63,14 @@ El objetivo principal del proyecto es crear una aplicación que permita a los us
 
 ## 3. Tecnologías utilizadas.
 
-- **[Python](https://www.python.org/)** -> Python es un lenguaje de programación de alto nivel, interpretado y de propósito general. Es el lenguaje utilizado para desarrollar la aplicación.
+- **[Python](https://www.python.org/)** -> `Python` es un lenguaje de programación de alto nivel, interpretado y de propósito general. Es el lenguaje utilizado para desarrollar la aplicación.
 
-- **[Flet](https://flet.dev/)** -> Flet es un marco de desarrollo de aplicaciones web y móviles que permite a los desarrolladores crear aplicaciones en tiempo real utilizando Python. Lo utilizaremos para construir la interfaz de usuario.
+- **[Flet](https://flet.dev/)** -> `Flet` es un marco de desarrollo de aplicaciones web y móviles que permite a los desarrolladores crear aplicaciones en tiempo real utilizando Python. Lo utilizaremos para construir la interfaz de usuario.
 
-- **[OpenRouter](https://openrouter.ai/)** ->
-OpenRouter ofrece acceso sin interrupciones a una variedad de **modelos de IA**, proporciona una API que te permite acceder a diferentes modelos de IA a través de un **único punto** final. En este caso nos permitirá usar el modelo de IA de **DeepSeek::r1** que es gratuito. **Es necesario obtener una api_key para usarla.**
+- **[OpenRouter](https://openrouter.ai/)** -> `OpenRouter` ofrece acceso sin interrupciones a una variedad de **modelos de IA**, proporciona una API que te permite acceder a diferentes modelos de IA a través de un **único punto** final. En este caso nos permitirá usar el modelo de IA de **DeepSeek::r1** que es gratuito y ofrece unos resultados bastantes buenos. **Es necesario obtener una api_key para usarla.**
 
 - **[OpenAi](https://openai.com/)** ->
-Libreria de python que nos permite interactuar con el modelo de **IA de DeepSeek** a través de OpenRouter.
+Librería de python que nos permite interactuar con el modelo de **IA de DeepSeek** a través de OpenRouter.
 
 Se puede instalar con el siguiente comando:
 ```bash
@@ -83,7 +82,7 @@ pip install openai
 - **[Poke-API](https://pokeapi.co/)** -> Proporciona información sobre diferentes pokemons. **No es necesario obtener una api_key para usarla.**
 
 - **[API RestCountries.](https://restcountries.com/)** -> Proporciona información sobre diferentes países, como su población, capital, moneda, etc. **No es necesario obtener una api_key para usarla.**
-La **activación** de la clave suele tardar alrededor de 45 minutos, tras lo cual te mandarán un mensaje al correo electrónico verificando que la clave está activa y lista para usar.
+La **activación** de la cuenta suele tardar alrededor de **45 minutos**, tras lo cual te mandarán un mensaje al correo electrónico verificando que la está activa y lista para usar.
 
 - **[DotEnv](https://pypi.org/project/python-dotenv/)** -> Librería que permite cargar variables de entorno desde un archivo `.env` a la aplicación.
 
@@ -104,26 +103,28 @@ El proyecto está estructurado de la siguiente manera:
 
 - **.env**: Archivo que contiene las variables de entorno necesarias para la aplicación. En este caso, contiene la **api_key de OpenRouter y OpenWeatherMap**.
 
-    **Importante:**
-    Deberás de poner tus propias claves de las APIs en el archivo `.env` para que la aplicación funcione correctamente.
+    - **Importante:**
+        Deberás de poner tus propias claves de las APIs en el archivo `.env` para que la aplicación funcione correctamente. Sino la obtienes, podrás probar la aplicación sólo con la API de **Poke-API** y **RestCountries**, ya que no requieren una clave de API para su uso.
 
 - **requirements.txt**: Archivo que contiene las dependencias necesarias para ejecutar la aplicación.
 
 ## **Importante:**
 
-Proporciono el archivo `requirements.txt` para que puedas instalar todas las dependencias necesarias de una sola vez. Se proporciona sólo las dependencias necesarias, ya que se ha probado en un entorno virtual y no se han encontrado problemas de compatibilidad. Si por algún caso no quieres usar el archivo `requirements.txt`, puedes instalar las librerias y dependencias necesarias de forma manual, como se ha ido explicando a lo largo de la documentación.
+Proporciono el archivo `requirements.txt` para que puedas instalar todas las dependencias necesarias de una sola vez. Se proporciona sólo las dependencias necesarias, ya que se ha probado en un entorno virtual y no se han encontrado problemas de compatibilidad. Sí por algún caso no quieres usar el archivo `requirements.txt`, puedes instalar las librerías y dependencias necesarias de forma manual, como se ha ido explicando a lo largo de la documentación.
 
 **Puedes instalar todo lo necesario ejecutando el siguiente comando:**
 
 ```bash
 pip install -r requirements.txt
 ```
+
 o
+
 ```bash
 pip3 install -r requirements.txt
 ```
 
-Dejo también un enlace a la **documentación de python** sobre como crear un entorno virtual, por si quieres usarlo, ya que es una buena práctica para evitar **problemas de compatibilidad** entre diferentes proyectos o por sí tuvieras **varias versiones** de python instaladas en tu sistema.
+Dejo también un enlace a la **documentación de python** sobre cómo crear un entorno virtual, por si quieres usarlo, ya que es una buena práctica para evitar **problemas de compatibilidad** entre diferentes proyectos o por sí tuvieras **varias versiones** de python instaladas en tu sistema.
 
 - **[Documentación Entornos Virtuales](https://docs.python.org/es/3/tutorial/venv.html).**
 
@@ -167,7 +168,7 @@ Si usas visual studio code, puedes ejecutar la aplicación directamente desde el
        
 9. **Manejo de errores**: La aplicación maneja errores y excepciones de manera adecuada, proporcionando mensajes claros al usuario en caso de que algo salga mal.
 
-### Ejemplo de uso de la aplicación:
+### Ejemplos de uso de la aplicación:
 
 ![Ejemplo de uso de la aplicación](img/img1.png)
 
