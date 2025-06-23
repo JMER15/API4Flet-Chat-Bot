@@ -82,7 +82,7 @@ pip install openai
 - **[Poke-API](https://pokeapi.co/)** -> Proporciona información sobre diferentes pokemons. **No es necesario obtener una api_key para usarla.**
 
 - **[API RestCountries.](https://restcountries.com/)** -> Proporciona información sobre diferentes países, como su población, capital, moneda, etc. **No es necesario obtener una api_key para usarla.**
-La **activación** de la cuenta suele tardar alrededor de **45 minutos**, tras lo cual te mandarán un mensaje al correo electrónico verificando que la está activa y lista para usar.
+La **activación** de la cuenta suele tardar alrededor de **45 minutos**, tras lo cual te mandarán un mensaje al correo electrónico verificando que la cuenta está activa y lista para usar.
 
 - **[DotEnv](https://pypi.org/project/python-dotenv/)** -> Librería que permite cargar variables de entorno desde un archivo `.env` a la aplicación.
 
