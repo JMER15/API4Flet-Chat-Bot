@@ -4,7 +4,7 @@
     <img style="width:400px" src="img/flet.png"></img>
 </div>
 
-## 📚 Contenido
+<h2 id="contenido">📚 Contenido</h2>
 
 - **[1. Descripción](#descripcion)**
 - **[2. Objetivo](#objetivo)**
