@@ -32,7 +32,7 @@ def main(page: Page):
             dropdown.Option("paises", "Consultar un País")
         ], 
         value="chat", # valor por defecto de la lista options
-        label="modo",
+        label="Seleccionar modo",
         border_color=Colors.BLUE_200,
         color=Colors.BLACK
     )
